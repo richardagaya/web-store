@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/background.png')",
+      },
       fontFamily:{
         Lato:['Lato'],
       }
