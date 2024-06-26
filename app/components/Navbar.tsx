@@ -12,15 +12,15 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-gray-800 p-4 font-Lato">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-lg font-bold">
           <Link href="/">Jukoro</Link>
         </div>
         <div className="hidden md:flex space-x-8">
-          <Link href="/" className="text-gray-300 hover:text-white">contact</Link>
+          <Link href="/" className="text-gray-300 hover:text-white">Contact</Link>
           <Link href="#about" className="text-gray-300 hover:text-white">About</Link>
-          <Link href="#packages" className="text-gray-300 hover:text-white">Premium services</Link>
+          <Link href="#packages" className="text-gray-300 hover:text-white">Premium</Link>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-300 hover:text-white focus:outline-none">
