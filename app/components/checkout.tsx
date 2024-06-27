@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PaystackButton } from 'react-paystack';
 
 const CustomCheckoutForm: React.FC<{ packageDetails: any }> = ({ packageDetails }) => {
-  const publicKey = 'pk_test_c293503f4a042d9f1fa48df49bee426a5e20f772'; // Replace with your Paystack public key
+  const publicKey = 'pk_live_989a59f7ea25d0617abff69b4fbe0eea77f9daf5'; // Replace with your Paystack public key
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -12,6 +12,7 @@ const CustomCheckoutForm: React.FC<{ packageDetails: any }> = ({ packageDetails 
     amount: packageDetails.price * 100, // Convert to kobo
     publicKey,
     text: 'Pay Now',
+    currency: 'KES', // Set currency to USD
     onSuccess: () => alert('Payment Successful'),
     onClose: () => alert('Payment Closed'),
     metadata: {

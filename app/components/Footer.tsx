@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="text-gray-600 body-font">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <div className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-          <Image width={40} height={40} src='/' alt='Logo'/>
+          <Image width={40} height={40} src='/logo.png' alt='Logo'/>
           <Link href='/'>
             <span className="cursor-pointer ml-3 text-xl">Jukoro</span>
           </Link>
