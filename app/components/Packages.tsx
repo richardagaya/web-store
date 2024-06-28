@@ -16,7 +16,7 @@ const Packages: React.FC = () => {
               className="w-full h-48 object-cover mb-4 rounded"
             />
             <h3 className="text-2xl font-bold mb-4 text-center">Health and Nutrition</h3>
-            <p className="text-gray-700 mb-4">Health and Nutrition guide e-books to help boost your health and immune system.</p>
+            <p className="text-gray-700 mb-4">Health and Nutrition guide e-books to help boost your healthmpacting everything from our personal happiness to our professional productivity and immune system.</p>
             <Link href="/mental" className="bg-blue-500 text-white px-4 py-2 rounded flex justify-center">
              Buy Package
             </Link>
@@ -44,7 +44,7 @@ const Packages: React.FC = () => {
               className="w-full h-48 object-cover mb-4 rounded"
             />
             <h3 className="text-2xl font-bold mb-4 text-center">Mental Health and Wellness</h3>
-            <p className="text-gray-700 mb-4">Mental health and wellness is a key factor in our daily life. We have e-books containing life hacks that will help you navigate through the journey.</p>
+            <p className="text-gray-700 mb-4">Mental health and wellness are crucial elements of our daily lives, impacting everything from our personal happiness to our professional productivity. </p>
             <Link href="/mental.tsx" className="bg-blue-500 text-white px-4 py-2 rounded flex justify-center">
               Buy Package
             </Link>
