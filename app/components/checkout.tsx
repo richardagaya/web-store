@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import  {PaystackButton}  from 'react-paystack';
+import { PaystackButton } from 'react-paystack';
 
 interface CustomCheckoutFormProps {
   packageDetails: any;
@@ -25,12 +25,22 @@ const CustomCheckoutForm: React.FC<CustomCheckoutFormProps> = ({ packageDetails,
       onTransactionResult('error');
     },
     metadata: {
-      name,
-      phone,
+      custom_fields: [
+        {
+          display_name: 'Name',
+          variable_name: 'name',
+          value: name,
+        },
+        {
+          display_name: 'Phone',
+          variable_name: 'phone',
+          value: phone,
+        },
+      ],
     },
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     // Additional validation can be done here
     // The PaystackButton handles the actual payment processing

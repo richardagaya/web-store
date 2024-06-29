@@ -46,7 +46,9 @@ const Packages: React.FC = () => {
         </div>
         <div className="mt-8">
           <h3 className="text-2xl font-bold text-center mb-4">Complete Your Payment</h3>
-          <CustomCheckoutForm packageDetails={selectedPackage} />
+          <CustomCheckoutForm packageDetails={selectedPackage} onTransactionResult={function (result: 'success' | 'error'): void {
+            throw new Error('Function not implemented.');
+          } } />
         </div>
       </div>
     </section>

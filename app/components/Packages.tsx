@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+type PackageType = 'nutrition' | 'computer' | 'mental';
+
 const Packages: React.FC = () => {
   const [quantities, setQuantities] = useState({
     nutrition: 1,
@@ -10,7 +12,7 @@ const Packages: React.FC = () => {
     mental: 1,
   });
 
-  const handleQuantityChange = (packageType: string, delta: number) => {
+  const handleQuantityChange = (packageType: PackageType, delta: number) => {
     setQuantities((prevQuantities) => {
       const newQuantity = prevQuantities[packageType] + delta;
       return {
