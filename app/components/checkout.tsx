@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { PaystackButton } from 'react-paystack';
+import  {PaystackButton}  from 'react-paystack';
 
-const CustomCheckoutForm: React.FC<{ packageDetails: any }> = ({ packageDetails }) => {
+interface CustomCheckoutFormProps {
+  packageDetails: any;
+  onTransactionResult: (result: 'success' | 'error') => void;
+}
+
+const CustomCheckoutForm: React.FC<CustomCheckoutFormProps> = ({ packageDetails, onTransactionResult }) => {
   const publicKey = 'pk_live_989a59f7ea25d0617abff69b4fbe0eea77f9daf5'; // Replace with your Paystack public key
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -12,9 +17,13 @@ const CustomCheckoutForm: React.FC<{ packageDetails: any }> = ({ packageDetails 
     amount: packageDetails.price * 100, // Convert to kobo
     publicKey,
     text: 'Pay Now',
-    currency: 'KES', // Set currency to USD
-    onSuccess: () => alert('Payment Successful'),
-    onClose: () => alert('Payment Closed'),
+    currency: 'KES', // Set currency to KES
+    onSuccess: () => {
+      onTransactionResult('success');
+    },
+    onClose: () => {
+      onTransactionResult('error');
+    },
     metadata: {
       name,
       phone,

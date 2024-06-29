@@ -1,32 +1,59 @@
-// components/AboutUs.tsx
-import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const AboutUs: React.FC = () => {
-    return (
-        <section id="about" className="py-20 bg-gray-100 flex justify-center items-center">
-            <div className="container mx-auto px-4">
-                <div className="bg-white shadow-md rounded-lg p-8 md:p-12">
-                    <h2 className="text-3xl font-bold text-center mb-8">Who are we</h2>
-                    <p className="text-lg text-center mx-auto max-w-prose">
-                        We provide professional, compiled e-books and resources to assist you in your everyday learning. Our curated content is available in our premium pro packages, which include:
-                    </p>
-                    <ul className="text-lg text-left mx-auto max-w-prose list-disc list-inside mt-4">
-                        <li>Gym workout and meal plans</li>
-                        <li>Programming tutorials and books</li>
-                        <li>Computer science course books</li>
-                        <li>Mental wellness e-books</li>
-                        <li>Nutrition guide e-books</li>
-                    </ul>
-                    <p className="text-lg text-center mx-auto max-w-prose mt-8">
-                        Our mission is to empower individuals by providing accessible and high-quality resources that enhance their knowledge and skills. Whether you are looking to improve your physical fitness, learn new programming languages, or boost your mental wellness, we have the resources you need to succeed.
-                    </p>
-                    <p className="text-lg text-center mx-auto max-w-prose mt-4">
-                        Join our community today and take the first step towards a brighter, more knowledgeable future. We are committed to supporting you on your learning journey with our comprehensive and expertly curated content.
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
+const Packages: React.FC = () => {
+  return (
+    <section id="packages" className="py-20">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8">Premium Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <Image
+              src="/nutrition.jpg"
+              alt="Health and Nutrition"
+              width={500}
+              height={300}
+              className="w-full h-48 object-cover mb-4 rounded"
+            />
+            <h3 className="text-2xl font-bold mb-4 text-center">Health and Nutrition</h3>
+            <p className="text-gray-700 mb-4">Health and Nutrition guide e-books to help boost your healthmpacting everything from our personal happiness to our professional productivity and immune system.</p>
+            <Link href="/nutrition" className="bg-blue-500 text-white px-4 py-2 rounded flex justify-center">
+             Buy Package
+            </Link>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <Image
+              src="/computer.jpg"
+              alt="Computer Science Packages"
+              width={500}
+              height={300}
+              className="w-full h-48 object-cover mb-4 rounded"
+            />
+            <h3 className="text-2xl font-bold mb-4 text-center">Computer Science Packages</h3>
+            <p className="text-gray-700 mb-4">Get computer science courses and university-certified documentation that will help you pursue your learning career in computer science.</p>
+            <Link href="/computer" className="bg-blue-500 text-white px-4 py-2 rounded flex justify-center">
+              Buy Package
+            </Link>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <Image
+              src="/mental.jpg"
+              alt="Mental Health and Wellness"
+              width={500}
+              height={300}
+              className="w-full h-48 object-cover mb-4 rounded"
+            />
+            <h3 className="text-2xl font-bold mb-4 text-center">Mental Health and Wellness</h3>
+            <p className="text-gray-700 mb-4">Mental health and wellness are crucial elements of our daily lives, impacting everything from our personal happiness to our professional productivity. </p>
+            <Link href="/mental" className="bg-blue-500 text-white px-4 py-2 rounded flex justify-center">
+              Buy Package
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default AboutUs;
+export default Packages;
+
