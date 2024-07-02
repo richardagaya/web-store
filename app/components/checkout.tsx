@@ -14,7 +14,7 @@ const CustomCheckoutForm: React.FC<CustomCheckoutFormProps> = ({ packageDetails,
 
   const componentProps = {
     email,
-    amount: packageDetails.price * 100, // Convert to kobo
+    amount: packageDetails.price * packageDetails.quantity * 100, // Convert to kobo and include quantity
     publicKey,
     text: 'Pay Now',
     currency: 'KES', // Set currency to KES
@@ -84,3 +84,6 @@ const CustomCheckoutForm: React.FC<CustomCheckoutFormProps> = ({ packageDetails,
 };
 
 export default CustomCheckoutForm;
+
+
+
