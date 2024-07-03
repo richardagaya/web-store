@@ -57,6 +57,10 @@ const Packages: React.FC = () => {
     }, 5000); // Clear the alert after 5 seconds
   };
 
+  const handleSelectPackage = (pkg: typeof packages[0]) => {
+    setSelectedPackage(pkg);
+  };
+
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
@@ -88,7 +92,7 @@ const Packages: React.FC = () => {
                 </button>
               </div>
               <button
-                onClick={() => setSelectedPackage(pkg)}
+                onClick={() => handleSelectPackage(pkg)}
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300"
               >
                 Select
@@ -109,3 +113,4 @@ const Packages: React.FC = () => {
 };
 
 export default Packages;
+
