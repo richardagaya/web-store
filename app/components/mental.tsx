@@ -6,19 +6,19 @@ const packages = [
     id: 1,
     title: 'Basic Package',
     description: 'Access to 50 e-books and tutorials',
-    price: 1000, // Price in Naira
+    price: 1000,
   },
   {
     id: 2,
     title: 'Standard Package',
     description: 'Access to 100 e-books and tutorials',
-    price: 2000, // Price in Naira
+    price: 2000, 
   },
   {
     id: 3,
     title: 'Premium Package',
     description: 'Access to 200+ e-books and tutorials',
-    price: 3000, // Price in Naira
+    price: 3000,
   },
 ];
 

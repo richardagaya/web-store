@@ -40,7 +40,7 @@ const Packages: React.FC = () => {
       const newQuantity = prevQuantities[packageId] + delta;
       return {
         ...prevQuantities,
-        [packageId]: newQuantity > 0 ? newQuantity : 1, // Ensure quantity doesn't go below 1
+        [packageId]: newQuantity > 0 ? newQuantity : 1, 
       };
     });
   };
@@ -54,7 +54,7 @@ const Packages: React.FC = () => {
 
     setTimeout(() => {
       setAlert({ type: null, message: '' });
-    }, 5000); // Clear the alert after 5 seconds
+    }, 5000); 
   };
 
   const handleSelectPackage = (pkg: typeof packages[0]) => {

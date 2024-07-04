@@ -7,17 +7,17 @@ interface CustomCheckoutFormProps {
 }
 
 const CustomCheckoutForm: React.FC<CustomCheckoutFormProps> = ({ packageDetails, onTransactionResult }) => {
-  const publicKey = 'pk_live_989a59f7ea25d0617abff69b4fbe0eea77f9daf5'; // Replace with your Paystack public key
+  const publicKey = 'pk_live_d2a8fb6ebe079ed460f8cff594cef5c7af20a3a9'; 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
   const componentProps = {
     email,
-    amount: packageDetails.price * packageDetails.quantity * 100, // Convert to kobo and include quantity
+    amount: packageDetails.price * packageDetails.quantity * 100,
     publicKey,
     text: 'Pay Now',
-    currency: 'KES', // Set currency to KES
+    currency: 'KES',
     onSuccess: () => {
       onTransactionResult('success');
     },
@@ -42,8 +42,6 @@ const CustomCheckoutForm: React.FC<CustomCheckoutFormProps> = ({ packageDetails,
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    // Additional validation can be done here
-    // The PaystackButton handles the actual payment processing
   };
 
   return (

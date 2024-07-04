@@ -17,10 +17,10 @@ const Hero: React.FC = () => {
         </div>
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
           <Image
-            src="/hero1.png" // Replace with your image path
+            src="/hero1.png" 
             alt="Pointing to the text"
-            width={500} // Set appropriate width
-            height={500} // Set appropriate height
+            width={500} 
+            height={500} 
             className="object-contain"
           />
         </div>

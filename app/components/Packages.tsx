@@ -17,7 +17,7 @@ const Packages: React.FC = () => {
       const newQuantity = prevQuantities[packageType] + delta;
       return {
         ...prevQuantities,
-        [packageType]: newQuantity > 0 ? newQuantity : 1, // Ensure quantity doesn't go below 1
+        [packageType]: newQuantity > 0 ? newQuantity : 1,
       };
     });
   };
