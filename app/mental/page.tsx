@@ -75,7 +75,7 @@ const Packages: React.FC = () => {
             <div key={pkg.id} className="bg-white p-6 rounded-lg shadow-lg text-center">
               <h3 className="text-2xl font-bold mb-4">{pkg.title}</h3>
               <p className="mb-4">{pkg.description}</p>
-              <p className="text-xl font-bold mb-6">${pkg.price}</p>
+              <p className="text-xl font-bold mb-6">KES{pkg.price}</p>
               <div className="flex justify-center items-center mb-4">
                 <button
                   className="bg-gray-200 text-gray-700 px-3 py-1 rounded-l"
