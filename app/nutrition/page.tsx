@@ -7,7 +7,7 @@ const packages = [
     id: 1,
     title: 'Silver Package',
     description: 'Access to 50 e-books and tutorials',
-    price: 1000,
+    price: 100,
   },
   {
     id: 2,
